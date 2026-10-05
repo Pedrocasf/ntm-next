@@ -60,7 +60,7 @@ sourceSets.main {
     resources.exclude("assets/**/*.obj")
 }
 
-val javacInternalExports = listOf("api", "code", "comp", "main", "model", "parser", "tree", "util")
+val javacInternalExports = listOf("api", "code", "comp", "jvm", "main", "model", "parser", "tree", "util")
     .map { "--add-exports=jdk.compiler/com.sun.tools.javac.$it=ALL-UNNAMED" }
 val javacInternalOpens = listOf("main")
     .map { "--add-opens=jdk.compiler/com.sun.tools.javac.$it=ALL-UNNAMED" }
